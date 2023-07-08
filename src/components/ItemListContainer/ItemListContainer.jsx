@@ -1,12 +1,12 @@
 import React from "react";
 
-function ItemListContainer( { message } ) {
+function ItemListContainer( { greeting } ) {
 
   // const username = "name";
 
   return (
     <div>
-      <h1>{message}</h1>
+      <h1>{greeting}</h1>
     </div>
   );
 }

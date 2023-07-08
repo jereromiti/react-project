@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer message="Este es un proyecto de React"/>
+      <ItemListContainer greeting="Este es un proyecto de React"/>
     </div>
   );
 }

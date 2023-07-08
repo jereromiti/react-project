@@ -4,8 +4,8 @@ import CartWidget from "./CartWidget/CartWidget";
 
 function NavBar() {
   return (
-    <header class="w-100 bg-dark">
-      <nav class="navbar navbar-expand-lg navbar-light">
+    <header class="w-100">
+      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
         <div class="header__nav__row container-fluid pe-lg-2">
           <a class="navbar-brand fw-bold fs-3" href="#">
             E-Commerce
