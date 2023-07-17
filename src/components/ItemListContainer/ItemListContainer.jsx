@@ -1,4 +1,5 @@
 import React from "react";
+import Item from "../Item/item";
 
 function ItemListContainer( { greeting } ) {
 
@@ -6,7 +7,9 @@ function ItemListContainer( { greeting } ) {
 
   return (
     <div>
-      <h1>{greeting}</h1>
+      <Item/>
+      <Item/>
+      <Item/>
     </div>
   );
 }
