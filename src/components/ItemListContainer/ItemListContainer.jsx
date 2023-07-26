@@ -1,15 +1,41 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import getData, { getCategoryData } from "../../services/asyncMock";
 import Item from "../Item/item";
+import { useParams } from "react-router-dom";
 
-function ItemListContainer( { greeting } ) {
+function ItemListContainer() {
+  const [products, setProducts] = useState([]);
+  const { categoryId } = useParams();
 
-  // const username = "name";
+  async function requestProducts() {
+    /*  "/" -> categoryId -> undefined */
+    /*  "/category/remeras" -> categoryId -> remeras */
+
+    /*  let respuesta = [];
+    if(categoryId === undefined) {
+      respuesta = await getData();
+    }
+    else {
+      respuesta = await getData(categoryId);
+    } */
+    let respuesta = categoryId
+      ? await getCategoryData(categoryId)
+      : await getData();
+    setProducts(respuesta);
+  }
+
+  useEffect(() => {
+    requestProducts();
+  }, []);
 
   return (
     <div>
-      <Item/>
-      <Item/>
-      <Item/>
+      <h1>Listado de Productos</h1>
+      <div>
+        {products.map((item) => (
+          <Item key={item.id} {...item} />
+        ))}
+      </div>
     </div>
   );
 }

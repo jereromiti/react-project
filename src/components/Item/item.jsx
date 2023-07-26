@@ -1,25 +1,22 @@
+import { Link } from "react-router-dom";
 import "./item.css";
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
 
 function Item(props) {
+  const { id, title, img, price, model } = props;
+
   return (
     <div class="container page-wrapper">
       <div class="page-inner">
         <div class="row">
           <div class="el-wrapper">
             <div class="box-up">
-              <img
-                class="img"
-                src="../assets/img/pro-x-superlight-black-gallery-6.webp"
-                alt=""
-              />
+              <img class="img" src={img} alt="" />
               <div class="img-info">
                 <div class="info-inner">
-                  <span class="p-name">Superlight Pro X</span>
-                  <span class="p-company">Logitech</span>
+                  <span class="p-name">{model}</span>
+                  <span class="p-company">{title}</span>
                 </div>
-                {/* <div class="a-size">
-                  Available sizes : <span class="size">S , M , L , XL</span>
-                </div> */}
               </div>
             </div>
 
@@ -29,9 +26,11 @@ function Item(props) {
               </div>
 
               <a class="cart" href="#">
-                <span class="price">$200</span>
+                <span class="price">${price}</span>
                 <span class="add-to-cart">
-                  <span class="txt">Añadir al carrito</span>
+                  <Link to={`/product/${id}`}>
+                    <ButtonComponent />
+                  </Link>
                 </span>
               </a>
             </div>
