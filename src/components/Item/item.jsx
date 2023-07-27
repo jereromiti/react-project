@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import "./item.css";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
+import { Link } from "react-router-dom";
 
 function Item(props) {
   const { id, title, img, price, model } = props;
@@ -29,7 +29,7 @@ function Item(props) {
                 <span class="price">${price}</span>
                 <span class="add-to-cart">
                   <Link to={`/product/${id}`}>
-                    <ButtonComponent />
+                    <ButtonComponent children="Ver Producto" />
                   </Link>
                 </span>
               </a>
