@@ -3,7 +3,7 @@ html {
   height: 100%;
 }
 
-.d-flex {
+/* .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,9 +13,9 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
+} */
 
-.flex-centerY-centerX {
+/* .flex-centerY-centerX {
   justify-content: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -23,21 +23,21 @@ html {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
+} */
 
 body {
   background-color: #f7f7f7;
 }
 
-.page-wrapper {
+/* .page-wrapper {
   height: 100%;
   display: table;
-}
+} */
 
-.page-wrapper .page-inner {
+/* .page-wrapper .page-inner {
   display: table-cell;
   vertical-align: middle;
-}
+} */
 
 .el-wrapper {
   width: 360px;

@@ -6,8 +6,8 @@ function Item(props) {
   const { id, title, img, price, model } = props;
 
   return (
-    <div class="container page-wrapper">
-      <div class="page-inner">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div>
         <div class="row">
           <div class="el-wrapper">
             <div class="box-up">

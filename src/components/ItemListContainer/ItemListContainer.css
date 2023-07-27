@@ -1,5 +1,7 @@
-.flex-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+/* .main__productos .main_title {
+    align-items: center;
+} */
+
+.gale__grid {
+    margin: auto 1rem;
+}

@@ -2,7 +2,8 @@
 
 main {
   max-width: 720px;
-  margin: 5% auto;
+  margin: 2% auto;
+  /* padding-bottom: 2px; */
 }
 
 .card {
@@ -36,12 +37,12 @@ main {
   transition: 200ms;
 }
 
-.icon a {
-  color: #fff;
+.icon:hover {
+  background: #252525;
 }
 
-.icon a:hover {
-  background: #252525;
+.icon a {
+  color: #fff;
 }
 
 .card__body {
@@ -140,6 +141,7 @@ main {
   flex-flow: row no-wrap;
   align-items: center;
   position: relative;
+  justify-content: flex-end;
 }
 
 .card .card__footer::before {
@@ -159,6 +161,11 @@ main {
     #ddd 100%
   );
 }
+
+/* #action {
+  display: flex;
+  justify-content: end;
+} */
 
 #action button {
   cursor: pointer;

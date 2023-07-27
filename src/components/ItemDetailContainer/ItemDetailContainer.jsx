@@ -20,11 +20,11 @@ function ItemDetailContainer() {
     <main>
       <div class="card">
         <div class="card__title">
-          <div class="icon">
-            <Link to="/" href="#">
+          <Link to="/home" href="#" class="icon">
+            <span>
               <i class="fa fa-arrow-left"></i>
-            </Link>
-          </div>
+            </span>
+          </Link>
           <h3>Producto nuevo</h3>
         </div>
         <div class="card__body">
