@@ -11,7 +11,7 @@ const productos = [
   {
     title: "Logitech",
     id: 2,
-    limit: 5,
+    stock: 5,
     model: "Superlight Pro X",
     img: "/assets/img/pro-x-superlight-black-gallery-6.webp",
     price: 300,
@@ -20,7 +20,7 @@ const productos = [
   {
     title: "Logitech",
     id: 3,
-    limit: 5,
+    stock: 5,
     model: "Superlight Pro X",
     img: "/assets/img/pro-x-superlight-black-gallery-6.webp",
     price: 300,
@@ -29,7 +29,7 @@ const productos = [
   {
     title: "Logitech",
     id: 4,
-    limit: 5,
+    stock: 5,
     model: "Superlight Pro X",
     img: "/assets/img/pro-x-superlight-black-gallery-6.webp",
     price: 300,
@@ -38,7 +38,7 @@ const productos = [
   {
     title: "Logitech",
     id: 5,
-    limit: 5,
+    stock: 5,
     model: "Superlight Pro X",
     img: "/assets/img/pro-x-superlight-black-gallery-6.webp",
     price: 300,
@@ -47,7 +47,7 @@ const productos = [
   {
     title: "Logitech",
     id: 6,
-    limit: 5,
+    stock: 5,
     model: "Superlight Pro X",
     img: "/assets/img/pro-x-superlight-black-gallery-6.webp",
     price: 300,
