@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./ItemDetailContainer.css";
-import { getProductData } from "../../services/asyncMock";
+import { getProductData } from "../../services/firebase.js";
 import { useParams, Link } from "react-router-dom";
 
 function ItemDetailContainer() {

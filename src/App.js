@@ -10,17 +10,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-        <BrowserRouter>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<ItemListContainer />} />
-            <Route path="/category/:categoryId" element={<ItemListContainer />} />
-            {/* Ruta con segmento URL dinamico */}
-            <Route path="/product/:id" element={<ItemDetailContainer />} />
-            <Route path="*" element={<h1>Page not found: 404</h1>} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          {/* Ruta con segmento URL dinamico */}
+          <Route path="/product/:id" element={<ItemDetailContainer />} />
+          <Route path="*" element={<h1>Page not found: 404</h1>} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
