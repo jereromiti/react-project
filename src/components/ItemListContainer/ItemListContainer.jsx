@@ -1,23 +1,32 @@
 import { useState, useEffect } from "react";
 import getData, { getCategoryData } from "../../services/asyncMock";
 import Item from "../Item/item";
-import { useParams } from "react-router-dom";
 import "./ItemListContainer.css";
+import "../Loader/Loader";
+import Loader from "../Loader/Loader";
+import { useParams } from "react-router-dom";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
   const { categoryId } = useParams();
-
-  async function requestProducts() {
-    let respuesta = categoryId
-      ? await getCategoryData(categoryId)
-      : await getData();
-    setProducts(respuesta);
-  }
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
+    async function requestProducts() {
+      let respuesta = categoryId
+        ? await getCategoryData(categoryId)
+        : await getData();
+      setProducts(respuesta);
+      setIsLoading(false)
+    }
+
     requestProducts();
-  }, []);
+  }, [categoryId]);
+
+  if (isLoading) {
+    return <Loader />
+  }
 
   return (
     <div className="main__productos container">

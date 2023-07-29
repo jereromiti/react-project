@@ -3,6 +3,11 @@ a.fas {
     font-size: 21px;
     text-decoration: none;
     color: #77e85295;
+    transition: all 0.4s;
+}
+
+a.fas:hover {
+    color: #fff; 
 }
 
 .num {
@@ -18,4 +23,9 @@ a.fas {
     font-size: 10px;
     background-color: #fff;
     color: #000;
+    transition: all 0.4s;
+}
+
+.num:hover {
+    background-color: #77e85295;
 }

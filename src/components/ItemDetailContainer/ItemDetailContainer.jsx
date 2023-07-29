@@ -14,13 +14,13 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     requestProduct();
-  }, []);
+  }, [id]);
 
   return (
     <main>
       <div class="card">
         <div class="card__title">
-          <Link to="/home" href="#" class="icon">
+          <Link to="/" href="#" class="icon">
             <span>
               <i class="fa fa-arrow-left"></i>
             </span>
@@ -68,7 +68,7 @@ function ItemDetailContainer() {
                   <i class="fa fa-star-o"></i>
                 </li>
               </ul>
-              <span>(64 Revisiones)</span>
+              <span>(64 Reviews)</span>
             </div>
           </div>
         </div>

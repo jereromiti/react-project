@@ -13,7 +13,7 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path="/home" element={<ItemListContainer />} />
+            <Route path="/" element={<ItemListContainer />} />
             <Route path="/category/:categoryId" element={<ItemListContainer />} />
             {/* Ruta con segmento URL dinamico */}
             <Route path="/product/:id" element={<ItemDetailContainer />} />

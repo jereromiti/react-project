@@ -25,7 +25,7 @@ function NavBar() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <Link to="/home"
+                <Link to="/"
                   class="nav-link pe-3 me-4 fw-bold"
                   aria-current="page"
                   href="#"
