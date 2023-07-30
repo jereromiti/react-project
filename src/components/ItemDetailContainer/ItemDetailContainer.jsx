@@ -7,20 +7,20 @@ function ItemDetailContainer() {
   const [product, setProduct] = useState({});
   const { id } = useParams();
 
-  async function requestProduct() {
-    const respuesta = await getProductData(id);
-    setProduct(respuesta);
-  }
-
   useEffect(() => {
+    async function requestProduct() {
+      const respuesta = await getProductData(id);
+      setProduct(respuesta);
+    }
+
     requestProduct();
   }, [id]);
 
   return (
     <main>
-      <div class="card">
+      <div class="card py-1">
         <div class="card__title">
-          <Link to="/" href="#" class="icon">
+          <Link to="/" class="icon">
             <span>
               <i class="fa fa-arrow-left"></i>
             </span>
@@ -32,7 +32,7 @@ function ItemDetailContainer() {
             <div class="featured_text">
               <h1>{product.title}</h1>
               <p class="sub">{product.model}</p>
-              <p class="price">${product.price}</p>
+              <p class="price">$ {product.price}</p>
             </div>
             <div class="image">
               <img src={product.img} alt="" />
@@ -41,15 +41,9 @@ function ItemDetailContainer() {
           <div class="half">
             <div class="description">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                voluptatem nam pariatur voluptate perferendis, asperiores
-                aspernatur! Porro similique consequatur, nobis soluta minima,
-                quasi laboriosam hic cupiditate perferendis esse numquam magni.
+                {product.description}
               </p>
             </div>
-            <span class="stock">
-              <i class="fa fa-pen"></i> En stock
-            </span>
             <div class="reviews">
               <ul class="stars">
                 <li>
@@ -70,6 +64,9 @@ function ItemDetailContainer() {
               </ul>
               <span>(64 Reviews)</span>
             </div>
+            <span class="stock">
+              <i class="fa fa-pen"></i> En stock ({product.stock})
+            </span>
           </div>
         </div>
         <div className="card__footer">

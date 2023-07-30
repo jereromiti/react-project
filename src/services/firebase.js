@@ -1,6 +1,14 @@
 //  Firebase
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, doc, getDoc, where, query } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  doc,
+  getDoc,
+  where,
+  query,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyADaq584G0zpN9NdVaTCn9nXUuLH3rkokc",
@@ -19,10 +27,11 @@ const db = getFirestore(appFirebase);
 //2. getData
 async function getData() {
   const productsRef = collection(db, "products");
-  //asyn await
+  //async await
   const documentSnapshot = await getDocs(productsRef);
   const documents = documentSnapshot.docs;
-  const docsData = documents.map((item) => {
+  const docsData = documents.map(
+    (item) => {
     return { ...item.data(), id: item.id };
   });
   return docsData;
@@ -41,10 +50,10 @@ async function getProductData(id) {
 }
 
 //4. getCategoryData
-async function getCategoryData(id) {
+async function getCategoryData() {
   const productsRef = collection(db, "products");
   //
-  const q = query(productsRef, where("category", "===", "Mouse"));
+  const q = query(productsRef, where("category", "==", "mouse"));
   const documentSnapshot = await getDocs(q);
 
   const documents = documentSnapshot.docs;

@@ -2,7 +2,7 @@ a.fas {
     position: relative;
     font-size: 21px;
     text-decoration: none;
-    color: #77e85295;
+    color: #3f96cd;
     transition: all 0.4s;
 }
 
@@ -24,8 +24,4 @@ a.fas:hover {
     background-color: #fff;
     color: #000;
     transition: all 0.4s;
-}
-
-.num:hover {
-    background-color: #77e85295;
 }

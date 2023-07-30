@@ -1,3 +1,7 @@
+footer {
+  bottom: 0;
+}
+
 footer .footer__icon {
   color: #fff;
   transition: all 0.6s;

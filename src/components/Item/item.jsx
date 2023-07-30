@@ -1,4 +1,4 @@
-import "./item.css";
+import "./Item.css";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ function Item(props) {
         <div class="row">
           <div class="el-wrapper">
             <div class="box-up">
-              <img class="img" src={img} alt="" />
+              <img class="img img-fluid" src={img} alt="" />
               <div class="img-info">
                 <div class="info-inner">
                   <span class="p-name">{model}</span>
@@ -26,7 +26,7 @@ function Item(props) {
               </div>
 
               <a class="cart" href="#">
-                <span class="price">${price}</span>
+                <span class="price">$ {price}</span>
                 <span class="add-to-cart">
                   <Link to={`/product/${id}`}>
                     <ButtonComponent children="Ver Producto" />

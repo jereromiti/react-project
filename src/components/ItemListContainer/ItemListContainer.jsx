@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getData, getCategoryData } from "../../services/firebase.js";
 
-import Item from "../Item/item";
+import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import "../Loader/Loader";
 import Loader from "../Loader/Loader";
@@ -27,18 +27,13 @@ function ItemListContainer() {
 
   if (isLoading) {
     return <Loader />;
+  } else {
+    return products.length === 0 ? (
+      <p>No hay productos disponibles para esa consulta.</p>
+    ) : (
+      <ItemList products={products} />
+    );
   }
-
-  return (
-    <div className="main__productos container">
-      <h1 className="main_title text-center my-5">Productos</h1>
-      <div className="gale__grid row gx-5 gy-4 mb-5 w-auto">
-        {products.map((item) => (
-          <Item key={item.id} {...item} />
-        ))}
-      </div>
-    </div>
-  );
 }
 
 export default ItemListContainer;

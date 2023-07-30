@@ -5,14 +5,15 @@ import CartWidget from "./CartWidget/CartWidget";
 
 function NavBar() {
   return (
-    <header class="w-100">
-      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
-        <div class="header__nav__row container-fluid pe-lg-2">
-          <a class="navbar-brand fw-bold fs-3" href="#">
-            E-Commerce
-          </a>
+    <header className="w-100">
+      <nav className="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark py-3" data-bs-theme="dark">
+        <div className="header__nav__row container-fluid pe-lg-2">
+          <Link to="/" className="navbar-brand fw-bold fs-3">
+          XGaming
+          </Link>
+
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -20,42 +21,38 @@ function NavBar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link to="/"
-                  class="nav-link pe-3 me-4 fw-bold"
-                  aria-current="page"
-                  href="#"
-                >
-                  INICIO
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link to="/" className="nav-link pe-3 me-4 fw-bold"aria-current="page">
+                  Inicio
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/category/tienda" class="nav-link pe-3 me-4 fw-bold" href="#">
-                  TIENDA
+              <li className="nav-item">
+                <Link to="/category/mouse" className="nav-link pe-3 me-4 fw-bold">
+                  Mouse
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/category/paginas" class="nav-link pe-3 me-4 fw-bold" href="#">
-                  PAGINAS
+              <li className="nav-item">
+                <Link to="/category/headphones" className="nav-link pe-3 me-4 fw-bold">
+                  Auriculares
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/category/blog" class="nav-link pe-3 me-4 fw-bold" href="#">
-                  BLOG
+              <li className="nav-item">
+                <Link to="/category/keyboard" className="nav-link pe-3 me-4 fw-bold">
+                  Teclados
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/category/contacto" class="nav-link pe-3 me-4 fw-bold" href="#">
-                  CONTACTO
+              <li className="nav-item">
+                <Link to="/category/contacto" className="nav-link pe-3 me-4 fw-bold">
+                  Contacto
                 </Link>
               </li>
             </ul>
             {/* Componente de Carrito de compras */}
-            <CartWidget artOfCart="10"/>
+            <CartWidget artOfCart="0"/>
           </div>
         </div>
       </nav>
