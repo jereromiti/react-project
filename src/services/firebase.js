@@ -24,12 +24,11 @@ const firebaseConfig = {
 const appFirebase = initializeApp(firebaseConfig);
 const db = getFirestore(appFirebase);
 
-//2. getData
+//2. getData // async await
 async function getData() {
   const productsRef = collection(db, "products");
-  //async await
-  const documentSnapshot = await getDocs(productsRef);
-  const documents = documentSnapshot.docs;
+  const documentsSnapshot = await getDocs(productsRef);
+  const documents = documentsSnapshot.docs;
   const docsData = documents.map(
     (item) => {
     return { ...item.data(), id: item.id };
