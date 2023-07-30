@@ -54,9 +54,10 @@ async function getCategoryData() {
   const productsRef = collection(db, "products");
   //
   const q = query(productsRef, where("category", "==", "mouse"));
-  const documentSnapshot = await getDocs(q);
+  const documentsSnapshot = await getDocs(q);
 
-  const documents = documentSnapshot.docs;
+  const documents = documentsSnapshot.docs;
+  
 
   return documents.map((item) => ({ ...item.data(), id: item.id }));
 }
