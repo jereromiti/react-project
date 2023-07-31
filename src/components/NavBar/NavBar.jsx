@@ -2,6 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget/CartWidget";
+import "../../../node_modules/hamburgers/dist/hamburgers.css"
 
 function NavBar() {
   return (
@@ -11,7 +12,6 @@ function NavBar() {
           <Link to="/" className="navbar-brand fw-bold fs-3">
           XGaming
           </Link>
-
           <button
             className="navbar-toggler"
             type="button"
