@@ -25,9 +25,9 @@ function Item(props) {
                 <div class="h-bg-inner"></div>
               </div>
 
-              <a class="cart" href="#">
+              <a class="view" href="#">
                 <span class="price">$ {price}</span>
-                <span class="add-to-cart">
+                <span class="view-product">
                   <Link to={`/product/${id}`}>
                     <ButtonComponent children="Ver Producto" />
                   </Link>

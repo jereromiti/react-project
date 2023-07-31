@@ -4,11 +4,9 @@ function ButtonComponent(props) {
   const { children } = props;
 
   return (
-    <>
-      <button className="btn">
-        <span className="txt">{children}</span>
-      </button>
-    </>
+    <button className="btn">
+      <span className="txt">{children}</span>
+    </button>
   );
 }
 

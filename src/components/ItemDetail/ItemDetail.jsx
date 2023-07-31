@@ -1,12 +1,12 @@
-import "./ItemDetail.css"
+import "./ItemDetail.css";
 import { Link } from "react-router-dom";
-
+import ButtonAddCart from "../ButtonAddCart/ButtonAddCart";
 
 function ItemDetail(props) {
   const { title, img, price, model, stock, description } = props;
 
-    return(
-        <main>
+  return (
+    <main>
       <div class="card py-1">
         <div class="card__title">
           <Link to="/" class="icon">
@@ -57,13 +57,11 @@ function ItemDetail(props) {
           </div>
         </div>
         <div className="card__footer">
-          <div id="action">
-            <button type="button">Añadir al carrito</button>
-          </div>
+          <ButtonAddCart />
         </div>
       </div>
     </main>
-    )
-};
+  );
+}
 
 export default ItemDetail;

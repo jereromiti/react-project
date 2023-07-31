@@ -29,8 +29,7 @@ async function getData() {
   const productsRef = collection(db, "products");
   const documentsSnapshot = await getDocs(productsRef);
   const documents = documentsSnapshot.docs;
-  const docsData = documents.map(
-    (item) => {
+  const docsData = documents.map((item) => {
     return { ...item.data(), id: item.id };
   });
   return docsData;
@@ -56,7 +55,6 @@ async function getCategoryData(category) {
   const documentsSnapshot = await getDocs(q);
 
   const documents = documentsSnapshot.docs;
-  
 
   return documents.map((item) => ({ ...item.data(), id: item.id }));
 }

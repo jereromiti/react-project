@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartWidget.css";
 
-function CartWidget( {artOfCart} ) {
+function CartWidget({ artOfCart }) {
   return (
     <ul class="navbar-nav icons ms-auto mb-2 mb-lg-0">
       <li class=" nav-item pe-3">

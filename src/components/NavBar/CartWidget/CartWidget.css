@@ -1,27 +1,27 @@
 a.fas {
-    position: relative;
-    font-size: 21px;
-    text-decoration: none;
-    color: #3f96cd;
-    transition: all 0.4s;
+  position: relative;
+  font-size: 21px;
+  text-decoration: none;
+  color: #3f96cd;
+  transition: all 0.4s;
 }
 
 a.fas:hover {
-    color: #fff; 
+  color: #fff;
 }
 
 .num {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: -7px;
-    left: 17px;
-    width: 16px;
-    height: 16px;
-    font-size: 10px;
-    background-color: #fff;
-    color: #000;
-    transition: all 0.4s;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: -7px;
+  left: 17px;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.4s;
 }
