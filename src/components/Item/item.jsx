@@ -6,33 +6,33 @@ function Item(props) {
   const { id, title, img, price, model } = props;
 
   return (
-    <div class="col-lg-4 col-md-6 col-sm-12">
+    <div className="col-lg-4 col-md-6 col-sm-12">
       <div>
-        <div class="row">
-          <div class="el-wrapper">
-            <div class="box-up">
-              <img class="img img-fluid" src={img} alt="" />
-              <div class="img-info">
-                <div class="info-inner">
-                  <span class="p-name">{model}</span>
-                  <span class="p-company">{title}</span>
+        <div className="row">
+          <div className="el-wrapper">
+            <div className="box-up">
+              <img className="img img-fluid" src={img} alt="" />
+              <div className="img-info">
+                <div className="info-inner">
+                  <span className="p-name">{model}</span>
+                  <span className="p-company">{title}</span>
                 </div>
               </div>
             </div>
 
-            <div class="box-down">
-              <div class="h-bg">
-                <div class="h-bg-inner"></div>
+            <div className="box-down">
+              <div className="h-bg">
+                <div className="h-bg-inner"></div>
               </div>
 
-              <a class="view" href="#">
-                <span class="price">$ {price}</span>
-                <span class="view-product">
+              <div className="view">
+                <span className="price">$ {price}</span>
+                <span className="view-product">
                   <Link to={`/product/${id}`}>
                     <ButtonComponent children="Ver Producto" />
                   </Link>
                 </span>
-              </a>
+              </div>
             </div>
           </div>
         </div>

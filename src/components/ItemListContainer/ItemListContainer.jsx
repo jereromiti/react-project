@@ -3,7 +3,6 @@ import { getData, getCategoryData } from "../../services/firebase.js";
 
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
-import "../Loader/Loader";
 import Loader from "../Loader/Loader";
 import { useParams } from "react-router-dom";
 

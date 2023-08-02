@@ -85,14 +85,23 @@ main {
 }
 
 .card__body .half .image {
+  position: relative;
+  overflow: hidden;
   padding-top: 15px;
   width: 100%;
+  cursor: zoom-in;
 }
 
 .card__body .half .image img {
   display: block;
   max-width: 100%;
   height: auto;
+
+  transition: transform 0.3s ease;
+}
+
+.card__body .half .image img:hover {
+  transform: scale(1.1);
 }
 
 .card__body .half .description {
