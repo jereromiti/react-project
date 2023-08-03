@@ -1,13 +1,22 @@
-a.fas {
-  position: relative;
-  font-size: 21px;
-  text-decoration: none;
-  color: #3f96cd;
-  transition: all 0.4s;
+.cart__container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 12px 0 12px;
 }
 
-a.fas:hover {
-  color: #fff;
+.item__cart {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.fas {
+  position: relative;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.4s;
 }
 
 .num {
@@ -16,12 +25,19 @@ a.fas:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: -7px;
-  left: 17px;
+  top: -12px;
+  left: 16px;
   width: 16px;
   height: 16px;
   font-size: 10px;
-  background-color: #fff;
+  background-color: #7ec1eb;
   color: #000;
   transition: all 0.4s;
+}
+
+/* General MD */
+@media (max-width: 768px) {
+  .item__cart {
+    margin-top: 1.5rem;
+  }
 }

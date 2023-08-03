@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 function CartWidget({ artOfCart }) {
   return (
-    <ul className="navbar-nav icons ms-auto mb-2 mb-lg-0">
-      <li className=" nav-item pe-3">
+    <ul className="cart__container navbar-nav col-md-4 col-sm-12">
+      <li className="item__cart">
         <Link to="/cart" className="fas fa-cart-shopping">
           <span className="num rounded-circle"> {artOfCart} </span>
         </Link>
