@@ -1,4 +1,4 @@
-import "./Item.css";
+import "./item.css";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import { Link } from "react-router-dom";
 
